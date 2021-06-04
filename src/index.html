@@ -25,14 +25,14 @@
         position: absolute;
       }
     </style>
+
+    <link rel="stylesheet" type="text/css" media="all" href="/build/webslides.css" />
   </head>
   <body style="margin: 0">
     <deckgo-deck>
       <my-template>
         <h1 slot="title">DeckDeckGo</h1>
-        <p slot="content">
-          My Template
-        </p>
+        <p slot="content">My Template</p>
       </my-template>
     </deckgo-deck>
 
@@ -44,6 +44,12 @@
         },
         {once: true}
       );
+    </script>
+
+    <script src="/build/webslides.js"></script>
+
+    <script>
+      //window.ws = new WebSlides();
     </script>
   </body>
 </html>

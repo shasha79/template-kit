@@ -1,6 +1,10 @@
 [
   {
     "tag": "my-template",
+    "author": {
+      "name": "David Dal Busco",
+      "url": "https://daviddalbusco.com"
+    },
     "props": [
       {
         "name": "value",

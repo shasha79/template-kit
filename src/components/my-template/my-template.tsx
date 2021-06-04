@@ -7,7 +7,7 @@ import {
   beforeSwipe,
   lazyLoadContent,
   hideAllRevealElements,
-  showAllRevealElements,
+  showAllRevealElements
 } from '@deckdeckgo/slide-utils';
 
 /**
@@ -17,7 +17,7 @@ import {
 @Component({
   tag: 'my-template',
   styleUrl: 'my-template.scss',
-  shadow: true,
+  shadow: true
 })
 export class MyTemplate implements DeckdeckgoSlide {
   @Element() private el: HTMLElement;
@@ -65,10 +65,25 @@ export class MyTemplate implements DeckdeckgoSlide {
     return (
       <Host class={{'deckgo-slide-container': true}}>
         <div class="deckgo-slide">
-          <slot name="title"></slot>
-          <slot name="content"></slot>
-          <p>An example of property: {this.value}</p>
-
+          <article id="webslides">
+            <section class="fullscreen bg-white">
+              <div class="card-50">
+                <figure>
+                  <img src="https://source.unsplash.com/ALtNa-uKy3M/" alt="Bonsai" />
+                </figure>
+                <div class="flex-content">
+                  <h2>
+                    <strong>
+                      <slot name="title"></slot>
+                    </strong>
+                  </h2>
+                  <p class="text-intro">
+                    <slot name="content"></slot>
+                  </p>
+                </div>
+              </div>
+            </section>
+          </article>
           {this.renderDeckSlots()}
         </div>
       </Host>
@@ -85,12 +100,14 @@ export class MyTemplate implements DeckdeckgoSlide {
    * - actions: can be use to add an action on the top right corner of a slide (optional)
    */
   private renderDeckSlots() {
-    return <Fragment>
-      <slot name="notes"></slot>
-      <slot name="header"></slot>
-      <slot name="footer"></slot>
-      <slot name="background"></slot>
-      <slot name="actions"></slot>
-    </Fragment>
+    return (
+      <Fragment>
+        <slot name="notes"></slot>
+        <slot name="header"></slot>
+        <slot name="footer"></slot>
+        <slot name="background"></slot>
+        <slot name="actions"></slot>
+      </Fragment>
+    );
   }
 }
