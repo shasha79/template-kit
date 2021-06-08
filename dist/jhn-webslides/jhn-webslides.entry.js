@@ -368,11 +368,15 @@ const MyTemplate = class {
               h(
                 'figure',
                 null,
-                h('img', {
-                  src:
-                    'https://s3.eu-central-1.amazonaws.com/jewish-heritage-tours/storymapjs/742d132034c90ea2dfff4fa9290d4f09/berlin-test1/_images/1.jpg',
-                  alt: 'Bonsai'
-                })
+                h(
+                  'img',
+                  {
+                    src:
+                      'https://s3.eu-central-1.amazonaws.com/jewish-heritage-tours/storymapjs/742d132034c90ea2dfff4fa9290d4f09/berlin-test1/_images/1.jpg',
+                    alt: 'Bonsai'
+                  },
+                  h('slot', {name: 'image'})
+                )
               ),
               h(
                 'div',

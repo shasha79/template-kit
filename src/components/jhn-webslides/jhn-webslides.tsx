@@ -12,7 +12,9 @@ import {
 
 /**
  * @slot title - An example of a custom slot
- * @slot content - Another example of a custom slot with a restricted list of usage - h1,h2,h3,section
+ * @slot content - Another example of a custom slot with a restricted list of usage - section
+ * @slot image - Another example of a custom slot with a restricted list of usage - deckgo-lazy-img
+
  */
 @Component({
   tag: 'jhn-webslides',
@@ -71,8 +73,9 @@ export class MyTemplate implements DeckdeckgoSlide {
                 <figure>
                   <img
                     src="https://s3.eu-central-1.amazonaws.com/jewish-heritage-tours/storymapjs/742d132034c90ea2dfff4fa9290d4f09/berlin-test1/_images/1.jpg"
-                    alt="Bonsai"
-                  />
+                    alt="Bonsai">
+                    <slot name="image"></slot>
+                  </img>
                 </figure>
                 <div class="flex-content">
                   <h2>

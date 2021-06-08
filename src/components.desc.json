@@ -17,10 +17,14 @@
         "name": "content",
         "placeholder": "Another example of a custom slot with a restricted list of usage",
         "types": [
-          "h1",
-          "h2",
-          "h3",
           "section"
+        ]
+      },
+      {
+        "name": "image",
+        "placeholder": "Another example of a custom slot with a restricted list of usage",
+        "types": [
+          "deckgo"
         ]
       },
       {
