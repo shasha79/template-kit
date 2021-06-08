@@ -1,13 +1,7 @@
+/*
+ Stencil Client Patch Browser v2.3.0 | MIT Licensed | https://stenciljs.com
+ */
 (function () {
-  /*
-    Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
-    This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-    The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-    The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-    Code distributed by Google as part of the polymer project is also
-    subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-  */
-  'use strict';
   var aa = new Set(
     'annotation-xml color-profile font-face font-face-src font-face-uri font-face-format font-face-name missing-glyph'.split(' ')
   );

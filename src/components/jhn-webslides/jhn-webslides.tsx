@@ -15,8 +15,8 @@ import {
  * @slot content - Another example of a custom slot with a restricted list of usage - h1,h2,h3,section
  */
 @Component({
-  tag: 'my-template',
-  styleUrl: 'my-template.scss',
+  tag: 'jhn-webslides',
+  styleUrl: 'jhn-webslides.scss',
   shadow: true
 })
 export class MyTemplate implements DeckdeckgoSlide {
@@ -69,7 +69,10 @@ export class MyTemplate implements DeckdeckgoSlide {
             <section class="fullscreen bg-white">
               <div class="card-50">
                 <figure>
-                  <img src="https://source.unsplash.com/ALtNa-uKy3M/" alt="Bonsai" />
+                  <img
+                    src="https://s3.eu-central-1.amazonaws.com/jewish-heritage-tours/storymapjs/742d132034c90ea2dfff4fa9290d4f09/berlin-test1/_images/1.jpg"
+                    alt="Bonsai"
+                  />
                 </figure>
                 <div class="flex-content">
                   <h2>

@@ -1,4 +1,4 @@
-import { Config } from '@stencil/core';
+import {Config} from '@stencil/core';
 import {JsonDocs} from '@stencil/core/internal';
 
 import {sass} from '@stencil/sass';
@@ -8,8 +8,8 @@ import autoprefixer from 'autoprefixer';
 import {generateDesc} from './deckdeckgo.desc';
 
 export const config: Config = {
-  namespace: 'my-template',
-  outputTargets:[
+  namespace: 'jhn-webslides',
+  outputTargets: [
     {
       type: 'dist'
     },
@@ -21,8 +21,8 @@ export const config: Config = {
       type: 'docs-custom',
       generator: (docs: JsonDocs) => {
         generateDesc(docs);
-      },
-    },
+      }
+    }
   ],
   plugins: [
     sass({

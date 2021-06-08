@@ -6,7 +6,7 @@
  */
 import {HTMLStencilElement, JSXBase} from './stencil-public-runtime';
 export namespace Components {
-  interface MyTemplate {
+  interface JhnWebslides {
     afterSwipe: () => Promise<void>;
     beforeSwipe: (enter: boolean, reveal: boolean) => Promise<boolean>;
     hideContent: () => Promise<void>;
@@ -19,17 +19,17 @@ export namespace Components {
   }
 }
 declare global {
-  interface HTMLMyTemplateElement extends Components.MyTemplate, HTMLStencilElement {}
-  var HTMLMyTemplateElement: {
-    prototype: HTMLMyTemplateElement;
-    new (): HTMLMyTemplateElement;
+  interface HTMLJhnWebslidesElement extends Components.JhnWebslides, HTMLStencilElement {}
+  var HTMLJhnWebslidesElement: {
+    prototype: HTMLJhnWebslidesElement;
+    new (): HTMLJhnWebslidesElement;
   };
   interface HTMLElementTagNameMap {
-    'my-template': HTMLMyTemplateElement;
+    'jhn-webslides': HTMLJhnWebslidesElement;
   }
 }
 declare namespace LocalJSX {
-  interface MyTemplate {
+  interface JhnWebslides {
     onSlideDidLoad?: (event: CustomEvent<void>) => void;
     /**
      * An example of a custom property
@@ -37,14 +37,14 @@ declare namespace LocalJSX {
     value?: string;
   }
   interface IntrinsicElements {
-    'my-template': MyTemplate;
+    'jhn-webslides': JhnWebslides;
   }
 }
 export {LocalJSX as JSX};
 declare module '@stencil/core' {
   export namespace JSX {
     interface IntrinsicElements {
-      'my-template': LocalJSX.MyTemplate & JSXBase.HTMLAttributes<HTMLMyTemplateElement>;
+      'jhn-webslides': LocalJSX.JhnWebslides & JSXBase.HTMLAttributes<HTMLJhnWebslidesElement>;
     }
   }
 }

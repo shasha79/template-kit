@@ -1,5 +1,8 @@
+/*
+ Stencil Client Patch Esm v2.3.0 | MIT Licensed | https://stenciljs.com
+ */
 var __assign =
-    (this && this.__assign) ||
+    (undefined && undefined.__assign) ||
     function () {
       return (__assign =
         Object.assign ||
