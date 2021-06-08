@@ -71,11 +71,11 @@ export class MyTemplate implements DeckdeckgoSlide {
             <section class="fullscreen bg-white">
               <div class="card-50">
                 <figure>
-                  <img
-                    src="https://s3.eu-central-1.amazonaws.com/jewish-heritage-tours/storymapjs/742d132034c90ea2dfff4fa9290d4f09/berlin-test1/_images/1.jpg"
-                    alt="Bonsai">
-                    <slot name="image"></slot>
-                  </img>
+                  <slot name="image">
+                    <img
+                      src="https://s3.eu-central-1.amazonaws.com/jewish-heritage-tours/storymapjs/742d132034c90ea2dfff4fa9290d4f09/berlin-test1/_images/1.jpg"
+                      alt="Bonsai"></img>
+                  </slot>
                 </figure>
                 <div class="flex-content">
                   <h2>
