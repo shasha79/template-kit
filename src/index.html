@@ -23,17 +23,43 @@
         display: flex;
         position: absolute;
       }
+
+      h2[slot='headline'] {
+        font-size: clamp(0.5rem, 2vw, 1.875rem); /* 1em */
+        margin-bottom: 0.8em;
+        user-select: text;
+      }
+      h1[slot='title'] {
+        font-weight: normal;
+        font-size: clamp(1.36rem, 5vw, 5.124rem); /* 2.733333em;  */
+        margin-bottom: 0.3em;
+        user-select: text;
+      }
+      h3[slot='subtitle'] {
+        font-size: clamp(0.6rem, 2.5vw, 2rem); /* 1.2em; */
+        user-select: text;
+      }
+
+      img[slot='image'] {
+        width: 50%;
+        height: 100%;
+        object-fit: cover;
+        border-right: 3rem solid #0849ff;
+      }
     </style>
-
-    <link rel="stylesheet" type="text/css" media="all" href="https://webslides.tv/static/css/webslides.css" />
-
-    <!--    <link rel="stylesheet" type="text/css" media="all" href="/build/webslides.css" /> -->
   </head>
   <body style="margin: 0">
     <deckgo-deck>
       <jhn-webslides>
-        <h1 slot="title">DeckDeckGo</h1>
-        <p slot="content">My Template</p>
+        <img
+          src="https://s3.eu-central-1.amazonaws.com/jewish-heritage-tours/storymapjs/742d132034c90ea2dfff4fa9290d4f09/berlin-test1/_images/1.jpg"
+          alt=""
+          class="slide-image"
+          slot="image"
+        />
+        <h1 slot="title" class="slide-info_title"><strong>Jewish Women</strong> in the Century of Change</h1>
+        <h3 slot="subtitle">Optional Sub-Headline Text to Describe this Virtual Exhibit</h3>
+        <h2 slot="headline">A J-Story Virtual Exhibit</h2>
       </jhn-webslides>
     </deckgo-deck>
 
@@ -47,11 +73,6 @@
       );
     </script>
 
-    <script nomodule src="https://webslides.tv/static/js/webslides.js"></script>
-    <!--  <script src="/build/webslides.js"></script> -->
-
-    <script>
-      //window.ws = new WebSlides();
-    </script>
+    <script></script>
   </body>
 </html>
