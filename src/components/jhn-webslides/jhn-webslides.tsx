@@ -70,21 +70,24 @@ export class MyTemplate implements DeckdeckgoSlide {
         <div class="deckgo-slide">
           <div class="container">
             <div class="slide">
-              <img
-                src="https://s3.eu-central-1.amazonaws.com/jewish-heritage-tours/storymapjs/742d132034c90ea2dfff4fa9290d4f09/berlin-test1/_images/1.jpg"
-                alt=""
-                class="slide-image"
-                slot="image"
-              />
+              <slot name="image">
+                <img
+                  src="https://s3.eu-central-1.amazonaws.com/jewish-heritage-tours/storymapjs/742d132034c90ea2dfff4fa9290d4f09/berlin-test1/_images/1.jpg"
+                  alt=""
+                  class="slide-image"
+                />
+              </slot>
               <div class="slide-info">
                 <h2 class="slide-info_headline" slot="headline">
-                  A J-Story Virtual Exhibit
+                  <slot name="headline">A J-Story Virtual Exhibit</slot>
                 </h2>
-                <h1 class="slide-info_title" slot="title">
-                  <strong>Jewish Women</strong> in the Century of Change
+                <h1 class="slide-info_title">
+                  <slot name="title">
+                    <strong>Jewish Women</strong> in the Century of Change
+                  </slot>
                 </h1>
-                <h3 class="slide-info_subtitle" slot="subtitle">
-                  Optional Sub-Headline Text to Describe this Virtual Exhibit
+                <h3 class="slide-info_subtitle">
+                  <slot name="subtitle">Optional Sub-Headline Text to Describe this Virtual Exhibit</slot>
                 </h3>
                 <div class="slide-info-footer">
                   <img class="slide-info-footer_logo" src="https://jhn.ngo/assets/img/logos/JHM.png" />
