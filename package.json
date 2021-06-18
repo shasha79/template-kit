@@ -23,7 +23,10 @@
     "test.watch": "stencil test --spec --e2e --watchAll"
   },
   "dependencies": {
-    "@deckdeckgo/slide-utils": "^2.6.1"
+    "@deckdeckgo/slide-utils": "^2.6.1",
+    "purecss": "^2.0.6",
+    "stencil-styled-components": "^1.4.0",
+    "tachyons": "^4.12.0"
   },
   "devDependencies": {
     "@stencil/core": "^2.3.0",

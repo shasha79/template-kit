@@ -14,22 +14,32 @@
     ],
     "slots": [
       {
-        "name": "content",
-        "placeholder": "Another example of a custom slot with a restricted list of usage",
+        "name": "headline",
+        "placeholder": "Exhibit headline",
         "types": [
-          "section"
+          "h2"
         ]
       },
       {
         "name": "image",
-        "placeholder": "Another example of a custom slot with a restricted list of usage",
+        "placeholder": "Exhibit hero image",
         "types": [
           "deckgo"
         ]
       },
       {
+        "name": "subtitle",
+        "placeholder": "Exhibit subtitle",
+        "types": [
+          "h3"
+        ]
+      },
+      {
         "name": "title",
-        "placeholder": "An example of a custom slot"
+        "placeholder": "Exhibit title",
+        "types": [
+          "h1"
+        ]
       }
     ]
   }
