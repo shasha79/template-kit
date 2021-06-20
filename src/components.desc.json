@@ -24,7 +24,7 @@
         "name": "image",
         "placeholder": "Exhibit hero image",
         "types": [
-          "deckgo"
+          "deckgo-lazy-img"
         ]
       },
       {
