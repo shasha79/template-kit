@@ -6,14 +6,14 @@ Create a template for your [DeckDeckGo] presentations.
 
 - [Getting Started](#getting-started)
 - [Development](#development)
-    - [Naming](#naming)
-    - [Author](#author)
-    - [Rendering](#rendering)
-    - [Styling](#styling)  
-    - [Lifecycle](#lifecycle)
-    - [Documentation](#documentation)
-      - [Slots](#slots)
-      - [Properties](#properties)
+  - [Naming](#naming)
+  - [Author](#author)
+  - [Rendering](#rendering)
+  - [Styling](#styling)
+  - [Lifecycle](#lifecycle)
+  - [Documentation](#documentation)
+    - [Slots](#slots)
+    - [Properties](#properties)
 - [Usage](#usage)
   - [Online editor](#online-editor)
   - [Starter kit](#starter-kit)
@@ -51,11 +51,11 @@ The default template's name is `my-template`. It should be renamed in your proje
 
 - Finally, change also the [name](https://github.com/deckgo/template-kit/blob/bad5acba265288abd5827b89e3c02245afb24b00/package.json#L2) in `package.json` and, `package-lock.json`
 
-Note: we do not have yet automated yes these renaming operations in our [cli] but, we do see the advantages. If you are willing to provide a PR to implement such features, we would love to get your contribution! 
+Note: we do not have yet automated yes these renaming operations in our [cli] but, we do see the advantages. If you are willing to provide a PR to implement such features, we would love to get your contribution!
 
 ### Author
 
-It is recommended to update the [author](https://github.com/deckgo/template-kit/blob/master/package.json#L42) in `package.json`. Provide a `name` and, `url`. If you share your template with the community, we will use these information to give you credits in our online editor. 
+It is recommended to update the [author](https://github.com/deckgo/template-kit/blob/master/package.json#L42) in `package.json`. Provide a `name` and, `url`. If you share your template with the community, we will use these information to give you credits in our online editor.
 
 You can also update the license in its related [file](https://github.com/deckgo/template-kit/blob/master/LICENSE) and this README. Note that currently, we only consider MIT templates to be shared with the community within our online editor.
 
@@ -88,6 +88,9 @@ Styling can be made with SCSS. It inherits two styles:
 
 - [deckdeckgo-slide.scss](https://github.com/deckgo/deckdeckgo/blob/master/utils/slide/styles/deckdeckgo-slide.scss) - Default spacing and positioning. You can override any properties or remove the import.
 - [deckdeckgo-slide-slots.scss](https://github.com/deckgo/deckdeckgo/blob/master/utils/slide/styles/deckdeckgo-slide-slots.scss) - The style of the default slots used by our core. It is recommended to stick to it as long as you do not remove these.
+
+The template is provided with a default "16 / 9" styling ratio. It means that regardless of the device or, the configuration (`direction`) of the deck, the slide will be presented in "16 / 9" (centered horizontally and vertically in the screen).
+If you wish to provide you own ratio or, a responsive design, replace elements and, styles identified with the selector `deckgo-aspect-ratio-*`.
 
 ### Lifecycle
 
@@ -133,7 +136,21 @@ This file describes the `properties` and `slots` of your template. Using these, 
 
 ##### Slots
 
-Each `slot` which can be edited by the users should be documented. It contains the `name` (if apply) and a `description`.
+`slot` can be used to make part of your slides editable by the users. These are placeholder inside your template and have to be rendered to the DOM.
+
+For example, the following would render an editable element identified by the name `title`.
+
+```
+render() {
+  return (
+    <Host class={{'deckgo-slide-container': true}}>
+        <slot name="title"></slot>
+    </Host>
+  );
+}
+```
+
+In addition, each of these `slot` have to be documented too. The documentation should contain the `name` (if apply) and a `description`.
 
 ```
 /**
@@ -159,7 +176,7 @@ These elements are:
 - `ul`
 - `deckgo-lazy-img` - The [DeckDeckGo] component for images which ensure lazy loading
 - `deckgo-highlight-code` - Block of code
-- `deckgo-markdown`  - Markdown
+- `deckgo-markdown` - Markdown
 - `deckgo-math` - Math formula
 - `deckgo-word-cloud` - Word of cloud
 
@@ -181,13 +198,13 @@ Note also that if your properties have effect on the UI and, need re-rendering, 
 
 ## Usage
 
-The templates you create are compatible with both our online editor and, starter kit. 
+The templates you create are compatible with both our online editor and, starter kit.
 
 ### Online editor
 
 To use your template in our online editor, it has to be made available through a CDN. We support [Unpkg](https://unpkg.com/), [Cloudfare](https://www.cloudflare.com/cdn) and [jsDelivr](https://www.jsdelivr.com/). If you would like to use another one, [get in touch](https://deckdeckgo.com/en/contact).
 
-Once published, you can add it to your collection of [templates](https://deckdeckgo.com/templates) with the CDN url, its tag name and, the automatically generated description file `src/components.desc.json`.
+Once published, you can add it to your collection of [templates](https://app.deckdeckgo.com/templates) with the CDN url, its tag name and, the automatically generated description file `src/components.desc.json`.
 
 ### Starter kit
 

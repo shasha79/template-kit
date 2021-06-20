@@ -3,6 +3,7 @@ import {JsonDocs} from '@stencil/core/internal';
 
 import {sass} from '@stencil/sass';
 import {postcss} from '@stencil/postcss';
+// @ts-ignore
 import autoprefixer from 'autoprefixer';
 
 import {generateDesc} from './deckdeckgo.desc';
@@ -22,6 +23,9 @@ export const config: Config = {
       generator: (docs: JsonDocs) => {
         generateDesc(docs);
       }
+    },
+    {
+      type: 'dist-custom-elements-bundle'
     }
   ],
   plugins: [
