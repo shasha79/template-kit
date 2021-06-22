@@ -40,6 +40,10 @@ body {
   border-right: 3rem solid #0849ff;
 }
 
+::slotted([slot="image"]) {
+  min-width: 50%;
+}
+
 .slide-info {
   display: flex;
   flex-direction: column;
