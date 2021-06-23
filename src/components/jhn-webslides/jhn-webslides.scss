@@ -41,7 +41,10 @@ body {
 }
 
 ::slotted([slot="image"]) {
+  object-fit: cover;
+  border-right: 3rem solid #0849ff;
   min-width: 50%;
+  height: 100%;
 }
 
 .slide-info {
