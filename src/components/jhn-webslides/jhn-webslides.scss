@@ -41,10 +41,11 @@ body {
   //object-fit: cover;
 }
 
-deckgo-lazy-img[slot=image] {
-  --deckgo-lazy-img-object-fit: cover
+deckgo-lazy-img[slot="image"] {
+  --deckgo-lazy-img-object-fit: cover;
+  --deckgo-lazy-img-min-width: 50%;
+  --deckgo-lazy-img-height: 100%;
   border-right: 3rem solid #0849ff;
-
 }
 
 .slide-info {
