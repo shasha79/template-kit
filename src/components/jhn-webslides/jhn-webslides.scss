@@ -36,15 +36,15 @@ body {
 .slide-image {
   min-width: 50%;
   height: 100%;
-  object-fit: cover;
-  border-right: 3rem solid #0849ff;
+  //border-right: 3rem solid #0849ff;
+
+  //object-fit: cover;
 }
 
-::slotted([slot="image"]) {
-  object-fit: cover;
+deckgo-lazy-img[slot=image] {
+  --deckgo-lazy-img-object-fit: cover
   border-right: 3rem solid #0849ff;
-  min-width: 50%;
-  height: 100%;
+
 }
 
 .slide-info {
