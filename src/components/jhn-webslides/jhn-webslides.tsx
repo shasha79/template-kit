@@ -70,7 +70,9 @@ export class MyTemplate implements DeckdeckgoSlide {
         <div class="deckgo-slide">
           <div class="container">
             <div class="slide">
-              <slot name="image"></slot>
+              <div class="slide-image">
+                <slot name="image"></slot>
+              </div>
               <div class="slide-info">
                 <h2 class="slide-info_headline">
                   <slot name="headline"></slot>
@@ -89,7 +91,6 @@ export class MyTemplate implements DeckdeckgoSlide {
               </div>
             </div>
           </div>
-          <slot name="subtitle"></slot>
           {this.renderDeckSlots()}
         </div>
       </Host>

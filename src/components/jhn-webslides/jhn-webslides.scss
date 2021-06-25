@@ -33,12 +33,15 @@ body {
   padding: 4rem 0;
 }
 
-.slide-image {
-  min-width: 50%;
-  height: 100%;
-  //border-right: 3rem solid #0849ff;
-
+.slide-image::slotted([name="image"]) {
+  //min-width: 50%;
+  //height: 100%;
   //object-fit: cover;
+  --deckgo-lazy-img-object-fit: cover;
+  --deckgo-lazy-img-min-width: 50%;
+  --deckgo-lazy-img-height: 100%;
+
+  border-right: 3rem solid #0849ff;
 }
 
 deckgo-lazy-img[slot="image"] {
